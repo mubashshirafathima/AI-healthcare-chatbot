@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+<section class="container" style="padding-top: 110px;">
+  <div class="row">
+    <div class="col-lg-8">
+      <h1>Prediction</h1>
+      {% if f_name %}
+        <p><b>File:</b> {{ f_name }}</p>
+      {% endif %}
+      {% if pred %}
+        <p><b>Result:</b> {{ pred }}</p>
+      {% else %}
+        <p>No prediction found for this session.</p>
+      {% endif %}
+      <p><a href="{{ url_for('index') }}">Back to Home</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
